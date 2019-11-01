@@ -2,6 +2,10 @@ provider "aws" {
   region = "us-east-1"
 }
 
+variable "server_port" {
+  description = "The port the server will listen on for HTTP requests"
+}
+
 resource "aws_instance" "example_name" {
   ami	= "ami-40d28157"
   instance_type = "t2.micro"
